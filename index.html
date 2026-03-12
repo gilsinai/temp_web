@@ -1,13 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Attendyy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Attendyy – Clever Event Manager</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f6f8f9;
+color:#333;
+text-align:center;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
+
+.logo{
+width:140px;
+margin-bottom:20px;
+}
+
+h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.subtitle{
+font-size:20px;
+color:#555;
+margin-bottom:40px;
+}
+
+.section{
+margin-top:60px;
+}
+
+.features{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+margin-top:30px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+max-width:240px;
+}
+
+.feature h3{
+margin-top:0;
+}
+
+.email-box{
+margin-top:40px;
+}
+
+input{
+padding:14px;
+width:260px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+button{
+padding:14px 22px;
+border:none;
+border-radius:8px;
+font-size:16px;
+background:#22c55e;
+color:white;
+cursor:pointer;
+margin-left:10px;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+#confirmation{
+margin-top:20px;
+font-weight:bold;
+color:#16a34a;
+display:none;
+}
+
+footer{
+margin-top:80px;
+font-size:14px;
+color:#777;
+}
+
+</style>
+
 </head>
 
+
 <body>
-  <h1>Welcome to Attendyy</h1>
-  <p>Automatic event manager</p>
-  <p></p>
+
+<div class="container">
+
+<img src="attendyy-logo.png" class="logo">
+
+<h1>Attendyy</h1>
+
+<p class="subtitle">
+A clever event manager that helps you invite people easily and manage events together.
+</p>
+
+
+<div class="section">
+
+<h2>Let’s invite people to your event — together</h2>
+
+<p>
+Attendyy uses smart AI to make event planning simple, friendly, and even a little fun.
+Instead of complicated forms or spreadsheets, you just talk naturally through WhatsApp.
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h2>How it works</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>🤖 AI Assistant</h3>
+<p>
+Our AI helps you create invitations, organize guests, and answer questions automatically.
+</p>
+</div>
+
+<div class="feature">
+<h3>💬 WhatsApp Friendly</h3>
+<p>
+Invite guests directly through WhatsApp and manage responses in a natural conversation.
+</p>
+</div>
+
+<div class="feature">
+<h3>🎉 Fun & Helpful</h3>
+<p>
+Attendyy keeps the tone friendly and light while helping you manage your event efficiently.
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>Interested?</h2>
+
+<p>
+Leave your email and we will contact you soon.
+</p>
+
+<div class="email-box">
+
+<input id="email" type="email" placeholder="your@email.com">
+
+<button onclick="submitEmail()">
+Notify Me
+</button>
+
+<div id="confirmation">
+✅ Thank you! Someone from Attendyy will contact you soon.
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>
+Attendyy – Clever Event Manager
+</p>
+
+</footer>
+
+</div>
+
+
+<script>
+
+function submitEmail(){
+
+let email = document.getElementById("email").value;
+
+if(email.length > 3){
+
+document.getElementById("confirmation").style.display = "block";
+
+document.getElementById("email").value = "";
+
+}
+
+}
+
+</script>
+
 
 </body>
+
 </html>
